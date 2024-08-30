@@ -50,6 +50,9 @@ dependencies:
   reflect-metadata:
     specifier: ^0.2.0
     version: 0.2.2
+  request-ip:
+    specifier: ^3.3.0
+    version: 3.3.0
   rxjs:
     specifier: ^7.8.1
     version: 7.8.1
@@ -79,6 +82,9 @@ devDependencies:
   '@types/node':
     specifier: ^20.3.1
     version: 20.16.2
+  '@types/request-ip':
+    specifier: ^0.0.41
+    version: 0.0.41
   '@types/supertest':
     specifier: ^6.0.0
     version: 6.0.2
@@ -1355,6 +1361,12 @@ packages:
 
   /@types/range-parser@1.2.7:
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
+    dev: true
+
+  /@types/request-ip@0.0.41:
+    resolution: {integrity: sha512-Qzz0PM2nSZej4lsLzzNfADIORZhhxO7PED0fXpg4FjXiHuJ/lMyUg+YFF5q8x9HPZH3Gl6N+NOM8QZjItNgGKg==}
+    dependencies:
+      '@types/node': 20.16.2
     dev: true
 
   /@types/semver@7.5.8:
@@ -4826,6 +4838,10 @@ packages:
     resolution: {integrity: sha512-PV0dzCYDNfRi1jCDbJzpW7jNNDRuCOG/jI5ctQcGKt/clZD+YcPS3yIlWuTJMmESC8aevCFmWJy5wjAFgNqN6w==}
     engines: {node: '>=0.10'}
     dev: true
+
+  /request-ip@3.3.0:
+    resolution: {integrity: sha512-cA6Xh6e0fDBBBwH77SLJaJPBmD3nWVAcF9/XAcsrIHdjhFzFiB5aNQFytdjCGPezU3ROwrR11IddKAM08vohxA==}
+    dev: false
 
   /require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
