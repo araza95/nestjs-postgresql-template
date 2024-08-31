@@ -1,9 +1,9 @@
 import { z } from 'nestjs-zod/z';
 
 /**
- * @description This is the schema for the .env file. 
+ * @description This is the schema for the .env file.
  * And this will check if the .env file has the correct keys and values.
- * 
+ *
  * Comment out those lines if you don't want to use the .env file.
  * For example: Initially, you don't have the AWS keys, so you can comment out the AWS keys.
  */

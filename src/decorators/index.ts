@@ -1,5 +1,3 @@
-import { IsYearMonthDayFormat } from "./IsYearMonthDayFormat.decorator";
+import { IsYearMonthDayFormat } from './IsYearMonthDayFormat.decorator';
 
-export {
-    IsYearMonthDayFormat
-}
+export { IsYearMonthDayFormat };
