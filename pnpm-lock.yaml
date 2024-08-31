@@ -92,22 +92,22 @@ devDependencies:
     specifier: ^6.0.0
     version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.5.4)
   '@typescript-eslint/parser':
-    specifier: ^6.0.0
+    specifier: ^6.21.0
     version: 6.21.0(eslint@8.57.0)(typescript@5.5.4)
   eslint:
     specifier: ^8.42.0
     version: 8.57.0
   eslint-config-prettier:
-    specifier: ^9.0.0
+    specifier: ^9.1.0
     version: 9.1.0(eslint@8.57.0)
   eslint-plugin-prettier:
-    specifier: ^5.0.0
+    specifier: ^5.2.1
     version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.3.3)
   jest:
     specifier: ^29.5.0
     version: 29.7.0(@types/node@20.16.2)(ts-node@10.9.2)
   prettier:
-    specifier: ^3.0.0
+    specifier: ^3.3.3
     version: 3.3.3
   source-map-support:
     specifier: ^0.5.21
