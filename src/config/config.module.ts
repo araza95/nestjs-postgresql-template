@@ -14,7 +14,9 @@ import { validationSchema } from './schema';
   imports: [
     NestConfigModule.forRoot({
       ignoreEnvFile: false,
-      load: [appConfig, databaseConfig, smtpConfig],
+      load: [
+        // appConfig, databaseConfig, smtpConfig
+      ],
       validate: validationSchema.parse,
       envFilePath: '.env',
       isGlobal: true,
