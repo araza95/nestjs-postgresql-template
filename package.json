@@ -1,8 +1,8 @@
 {
   "name": "nest-js-starter-template",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "version": "1.0.0",
+  "description": "A starter template for NestJS with TypeORM powered by PostgreSQL. It will have a media library with AWS, S3 SDK, JWT AUTH Configuration and a custom HTTP logger setup. ",
+  "author": "araza95",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
