@@ -3,7 +3,6 @@ import { Module } from '@nestjs/common';
 import { ConfigModule as NestConfigModule } from '@nestjs/config';
 
 // Loaders
-import databaseConfig from './loaders/database.config';
 import appConfig from './loaders/app.config';
 import smtpConfig from './loaders/smtp.config';
 
@@ -14,9 +13,7 @@ import { validationSchema } from './schema';
   imports: [
     NestConfigModule.forRoot({
       ignoreEnvFile: false,
-      load: [
-        // appConfig, databaseConfig, smtpConfig
-      ],
+      load: [appConfig, smtpConfig],
       validate: validationSchema.parse,
       envFilePath: '.env',
       isGlobal: true,

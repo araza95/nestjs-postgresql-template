@@ -13,9 +13,11 @@ import { JwtAdminStrategy } from './strategy/admin.strategy';
 
 // Modules
 import { UserModule } from 'src/modules/features/user/user.module';
+import { JwtModule } from '../jwt/jwt.module';
+import { OtpModule } from 'src/modules/features/otp/otp.module';
 
 @Module({
-  imports: [UserModule],
+  imports: [UserModule, JwtModule, OtpModule],
   controllers: [AuthController],
   providers: [JwtUserStrategy, JwtAdminStrategy, AuthService],
 })
