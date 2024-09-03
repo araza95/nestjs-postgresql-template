@@ -10,7 +10,7 @@ export const paymentSuccessfulEmail = ({
   owner_name: string;
   owner_email: string;
   price: number;
-}) => `
+}): string => `
 <html lang="en">
 <head>
     <meta charset="UTF-8">

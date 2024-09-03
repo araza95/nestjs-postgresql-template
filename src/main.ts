@@ -14,7 +14,7 @@ import { SwaggerTheme, SwaggerThemeNameEnum } from 'swagger-themes';
 // Request IP Import
 import * as requestIp from 'request-ip';
 
-async function bootstrap() {
+async function bootstrap(): Promise<void> {
   // Raw Body is used to get the raw body of the request, which is useful for parsing the request body.
   const app = await NestFactory.create(AppModule, {
     rawBody: true,

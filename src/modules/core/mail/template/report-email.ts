@@ -12,7 +12,7 @@ export const reportEmailTemplate = ({
   reporterEmail: string;
   reportedAgainstEmail: string;
   reference_id: number;
-}) => `
+}): string => `
 <!doctype html>
 <html lang="en">
 

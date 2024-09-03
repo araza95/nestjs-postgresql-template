@@ -49,9 +49,7 @@ export class OTPTableEntity {
    * 1. Many-to-one relation with user
    */
 
-  // ================= TEMPORARY ts-ignore added, Because it is a STARTER TEMPLATE =================
   // Many-to-one relation with user
-  // @ts-ignore
-  @ManyToOne(() => UserEntity, (user) => user.otp)
+  @ManyToOne(() => UserEntity, (user) => user.OTPs)
   user: UserEntity;
 }
