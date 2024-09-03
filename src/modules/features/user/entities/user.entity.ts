@@ -3,9 +3,11 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  ManyToOne,
   PrimaryColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import { OTPTableEntity } from '../../otp/entity/otp.entity';
 
 // Enum Imports
 
@@ -47,4 +49,8 @@ export class UserEntity {
    * 1. Many-to-one with UserRoleEntity
    * 2. One-to-many with OTPTableEntity
    */
+
+  // Many-to-one relation with user
+  @ManyToOne(() => OTPTableEntity, (otp) => otp.user)
+  OTPs: OTPTableEntity;
 }

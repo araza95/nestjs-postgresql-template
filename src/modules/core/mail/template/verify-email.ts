@@ -1,4 +1,4 @@
-const template = (email: string, code: string) => `<!doctype html>
+const template = (email: string, code: string): string => `<!doctype html>
 <html lang="en">
 
 <head>

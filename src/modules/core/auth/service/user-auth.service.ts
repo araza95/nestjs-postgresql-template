@@ -19,7 +19,8 @@ import { JwtAdminService } from '../../jwt/services/jwt-admin.service';
 // ENUMS, TYPES, INTERFACES and DTO imports
 import { JWT } from 'src/types/common.type';
 import { OTP_REASON_ENUM } from 'src/types/enums/otp/otp-reason.enum';
-import { USER_ROLE_ENUM } from 'src/types/enums/user/user-role.enum';
+// uncomment this when you want to use enums
+// import { USER_ROLE_ENUM } from 'src/types/enums/user/user-role.enum';
 
 // utils imports
 import { throwHttpException } from 'src/utils/app/httpException';
@@ -54,10 +55,9 @@ export class AuthService {
     }
 
     // This is ignored because it is a starter template. In your application, you should check if the user is onboarded.
-    // @ts-ignore
-    if (!user.is_onboard) {
-      throwHttpException('User not onboarded', HttpStatus.BAD_REQUEST);
-    }
+    // if (!user.is_onboard) {
+    //   throwHttpException('User not onboarded', HttpStatus.BAD_REQUEST);
+    // }
 
     // TODO: ADD user placed status check
 
@@ -92,7 +92,7 @@ export class AuthService {
    *   password: 'password123',
    *   date_of_birth: '1990-01-01',
    * });
-   * console.log(response.user, response.token, response.message);
+   * Logger.log(response.user, response.token, response.message);
    */
   async register({
     email,
@@ -106,6 +106,11 @@ export class AuthService {
 
     const user = await this.userService.getUserFromDB({
       where: { email },
+    });
+
+    Logger.log({
+      user,
+      hashedPassword,
     });
 
     // ===================================== THIS IS A TEMPORARY BLOCK FOR STARTER TEMPLATE =====================================
@@ -163,7 +168,7 @@ export class AuthService {
    *
    * @example
    * const response = await userRepository.forgotPassword({ email: 'user@example.com' });
-   * console.log(response.message);
+   * Logger.log(response.message);
    */
   async requestOTP({
     email,
@@ -209,7 +214,7 @@ export class AuthService {
    *   otp: '123456',
    *   password: 'newPassword123',
    * });
-   * console.log(response.message);
+   * Logger.log(response.message);
    */
   async resetPassword({
     email,
@@ -258,27 +263,33 @@ export class AuthService {
    *
    * @example
    * const token = await userRepository.generateJWT(user);
-   * console.log(token);
+   * Logger.log(token);
    */
-  generateJWT(user: UserEntity): string {
+  generateJWT(user: UserEntity): string | null {
     const payload: JWT = {
       id: user.id,
       email: user.email,
     };
 
+    // REMOVE THIS CONSOLE LOG AND RETURN A PROPER JWT FOR YOUR APPLICATION
+    Logger.log(
+      '[User Auth Service][generateJWT]: ',
+      this.jwtService.generateAuthToken({ payload }),
+    );
+    return null;
+
     // This is ignored because it is a starter template. In your application, you should check the user's role.
-    // @ts-ignore
-    switch (user.role.name) {
-      case USER_ROLE_ENUM.USER:
-        Logger.log('Generating user JWT');
-        return this.jwtService.generateAuthToken({ payload });
+    // switch (user.role.name) {
+    //   case USER_ROLE_ENUM.USER:
+    //     Logger.log('Generating user JWT');
+    //     return this.jwtService.generateAuthToken({ payload });
 
-      case USER_ROLE_ENUM.ADMIN:
-        Logger.log('Generating admin JWT');
-        return this.jwtAdminService.generateAuthToken({ payload });
+    //   case USER_ROLE_ENUM.ADMIN:
+    //     Logger.log('Generating admin JWT');
+    //     return this.jwtAdminService.generateAuthToken({ payload });
 
-      default:
-        break;
-    }
+    //   default:
+    //     break;
+    // }
   }
 }

@@ -15,7 +15,7 @@ const userFeedbackEmailTemplate = ({
   userName: string;
   feedbackContent: string;
   rating: number;
-}) => `
+}): string => `
   <!doctype html>
   <html lang="en">
   <head>
