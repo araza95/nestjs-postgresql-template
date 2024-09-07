@@ -19,7 +19,7 @@ Welcome to the **NestJS Starter Template**. This project uses **PostgreSQL** for
     - `database.config.ts`: Configuration file for database connection settings.
     - `smtp.config.ts`: Configuration for SMTP mail service.
   - **schema**:
-    - `zod.schema.ts`: Zod schema for validating environment variables.
+    - `index.ts`: Zod schema for validating environment variables.
 
 ---
 
