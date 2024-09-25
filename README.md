@@ -158,7 +158,12 @@ Welcome to the **NestJS Starter Template**. This project uses **PostgreSQL** for
    pnpm build
    ```
 
-5. **Swagger Documentation**:
+5. **Init Husky**: ( To set up Git hooks using Husky, run the following command ):
+    ```bash
+    pnpm exec husky init
+    ```
+
+6. **Swagger Documentation**:
    Access the auto-generated Swagger API documentation at:
    ```
    http://localhost:6000/docs
